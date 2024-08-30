@@ -20,6 +20,7 @@ public class ProductService {
     public List<Product> listAllProduct() {
         return productRepository.findAll();
     }
+
     public List<Product> filterProductsByNameOrDesc(String name,String desc) {
         return productRepository.filterProductsByNameOrDesc(name, desc);
     }

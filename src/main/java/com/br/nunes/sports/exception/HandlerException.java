@@ -1,6 +1,5 @@
 package com.br.nunes.sports.exception;
 
-import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,20 +23,6 @@ public class HandlerException {
                         .details(entityNotFound.getCause() != null ? entityNotFound.getCause().toString() : "No details available")
                         .developerMessage(entityNotFound.getClass().getName())
                         .build(), HttpStatus.NOT_FOUND);
-
-    }
-
-    @ExceptionHandler(EntityExistsException.class)
-    public ResponseEntity<ExceptionDetails> handleEntityExistsException(EntityExistsException entityExist) {
-        return new ResponseEntity<>(
-                ExceptionDetails.builder()
-                        .message(entityExist.getMessage())
-                        .timestamp(LocalDateTime.now())
-                        .status(HttpStatus.CONFLICT.value())
-                        .title("EntityExistsException , Check the Documentation")
-                        .details(entityExist.getCause() != null ? entityExist.getCause().toString() : "No details available")
-                        .developerMessage(entityExist.getClass().getName())
-                        .build(), HttpStatus.CONFLICT);
 
     }
 
