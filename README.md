@@ -32,4 +32,26 @@ Esta API permite a criação, listagem, filtragem, atualização e exclusão de 
 | DELETE | `/api/products/delete` | Deleta um produto                                    |
 
 
+## Como Executar a API
+## Pré-requisitos
+
+**Java 22: Certifique-se de ter o JDK instalado.**
+**Docker: Necessário para rodar o banco de dados MySQL com Docker Compose.**
+**Docker Compose: Necessário para orquestrar o container do banco de dados.**
+
+**Passos para Executar**
+1. **Clone o Repositório**:
+git clone https://github.com/AllisonMarquesSouza/nunesSport.git
+
+**2.Va até o diretórito do projeto e abra em uma Idea de preferência**
+cd <DIRETORIO_DO_PROJETO>
+
+**3.Execute o docker compose no terminal dentro do diretorio do projeto, irá carregar a imagem do banco de dados**
+OBS :Você pode mudar o user, password, nome de rede ou qualquer coisa . Só lembre de modificar no properties do projeto as mudanças.
+docker compose up -d 
+
+**4.Execute a aplicação em sua Idea e vá até  http://localhost:8080/swagger-ui/index.html#/ , lá estarão todos os endpoints disponíveis para uso!!**
+
+
+
 
