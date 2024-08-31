@@ -35,22 +35,32 @@ Esta API permite a criação, listagem, filtragem, atualização e exclusão de 
 ## Como Executar a API
 ## Pré-requisitos
 
-**Java 22: Certifique-se de ter o JDK instalado.**
-**Docker: Necessário para rodar o banco de dados MySQL com Docker Compose.**
-**Docker Compose: Necessário para orquestrar o container do banco de dados.**
+#### Java 22: Certifique-se de ter o JDK instalado.
+#### Docker: Necessário para rodar o banco de dados MySQL com Docker Compose.
+#### Docker Compose: Necessário para orquestrar o container do banco de dados.
 
-**Passos para Executar**
-1. **Clone o Repositório**:
+## Passos para Executar
+#### 1. Clone o Repositório**:
+```sh
 git clone https://github.com/AllisonMarquesSouza/nunesSport.git
+```
 
-**2.Va até o diretórito do projeto e abra em uma Idea de preferência**
+#### 2. Vá até o diretórito do projeto e abra em uma Idea de preferência:
+```sh
 cd <DIRETORIO_DO_PROJETO>
+```
 
-**3.Execute o docker compose no terminal dentro do diretorio do projeto, irá carregar a imagem do banco de dados**
-OBS :Você pode mudar o user, password, nome de rede ou qualquer coisa . Só lembre de modificar no properties do projeto as mudanças.
-docker compose up -d 
+#### 3. Execute o docker compose no terminal dentro do diretorio do projeto, irá carregar a imagem do banco de dados:
+OBS : Você pode mudar o user, password, nome de rede ou qualquer coisa . Só lembre de modificar no properties do projeto as mudanças.
+```sh
+docker compose up -d
+```
 
-**4.Execute a aplicação em sua Idea e vá até  http://localhost:8080/swagger-ui/index.html#/ , lá estarão todos os endpoints disponíveis para uso!!**
+#### 4. Execute a aplicação em sua Idea e vá até a url:
+```sh
+http://localhost:8080/swagger-ui/index.html#/ 
+```
+#### Lá estarão todos os endpoints da aplicação disponível para uso.
 
 
 
