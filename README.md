@@ -1,24 +1,24 @@
 # Nunes Sports API
 
-This API to allow the criation, listing, filters, updates and deletion products of company fictitious Nunes Sports. 
+This API allows the creation, listing, filters, updates, and deletion of products of the company fictitious Nunes Sports. 
 
 ## Technologies used
 
 - **Java**: Language of Programming.
-- **Spring Boot**: Framework to build Aplications Java.
+- **Spring Boot**: Framework to build Applications Java.
 - **MySQL**: Data Base relational.
-- **Flyway**: Manegement of migrations of data base tables.
-- **Lombok**: Library to reduce the code at some parts.
+- **Flyway**: Manegement of migrations of database tables.
+- **Lombok**: The library will reduce the code in some parts.
 - **OpenAPI (Swagger)**: To document the API.
 
 ## Features API
 
-1. **Create product**: ADD a new product in data base.
+1. **Create product**: ADD a new product in the data database.
 2. **List all products**: Return all products registered.
 3. **Filter products**: Filter products by name or description agreed with params.
-4. **Find by code (UUID)**: Return details specifics of product using the code unique.
-5. **Update product**: Update the information of a product that ever exist.
-6. **Delete product**: Delete one product of data base.
+4. **Find by code (UUID)**: Return details and specifics of the product using the unique code.
+5. **Update product**: Update a product's information that ever exists.
+6. **Delete product**: Delete one product of database.
 
 ## Endpoints API
 
@@ -45,13 +45,13 @@ This API to allow the criation, listing, filters, updates and deletion products 
 git clone https://github.com/AllisonMarquesSouza/nunesSport.git
 ```
 
-#### 2. Go to directory project and open the Idea of your preference:
+#### 2. Go to the directory project and open the Idea of your preference:
 ```sh
 cd <DIRETORIO_DO_PROJETO>
 ```
 
-#### 3. Run the docker compose in terminal inside the directory of project, wait to load the image of data base:
-OBS : You can to change the user, password, network or anything. Remember if you change something , then uptade in the properties of project.
+#### 3. Run the docker compose in the terminal inside the directory of the project, and wait to load the image of a database:
+OBS: You can change the user, password, network, or anything. Remember if you change something, then uptade in the properties of the project.
 ```sh
 docker compose up -d
 ```
