@@ -1,22 +1,42 @@
+
+networks:
+  nunes-sport:
+    driver: bridge
+    name: nunes-sport
+
+volumes:
+  mysqlDB:
+    name: mysql
+
 services:
-  db:
-    image: mysql:8.0.33
-    container_name: mysql
+  mysql:
+    image: mysql:8.0.31
+    container_name: mysql01
     environment:
-      MYSQL_DATABASE: nunesSportDB
-      MYSQL_ROOT_PASSWORD: rootPassword
-      MYSQL_USER: user
-      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: nunes_sport
+      MYSQL_ROOT_USERNAME: root
+      MYSQL_ROOT_PASSWORD: root
     volumes:
-      - db:/var/lib/mysql
+      - mysqlDB:/var/lib/mysql
     ports:
       - "3306:3306"
     networks:
+      - nunes-sport
+
+
+  nunes_sport:
+    build: .
+    container_name: nunes_sport01
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/nunes_sport
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+    depends_on:
+      - mysql
+    ports:
+      - "8080:8080"
+    networks:
       - nunes-sport-network
 
-networks:
-  nunes-sport-network:
-    driver: bridge
 
-volumes:
-  db:
+
